@@ -1,4 +1,4 @@
-package com.github.zengfr.project.stepchain.impl;
+package com.github.zengfr.project.stepchain.config;
 
 import java.util.Map;
 

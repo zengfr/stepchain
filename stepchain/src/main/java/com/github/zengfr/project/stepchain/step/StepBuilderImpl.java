@@ -1,4 +1,4 @@
-package com.github.zengfr.project.stepchain.impl;
+package com.github.zengfr.project.stepchain.step;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,7 +14,7 @@ import com.github.zengfr.project.stepchain.StepBuilder;
 @Component
 public class StepBuilderImpl implements StepBuilder {
 	@Autowired
-	Config config;
+	protected Config config;
 
 	@Override
 	public <T> Step<T> createStep() {

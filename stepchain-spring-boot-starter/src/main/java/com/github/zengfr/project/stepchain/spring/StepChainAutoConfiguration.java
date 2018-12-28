@@ -8,6 +8,11 @@ import org.springframework.context.annotation.Configuration;
  *         https://github.com/zengfr/stepchain-spring-boot-starter
  */
 @Configuration
-@ComponentScan(value = "com.github.zengfr.project.stepchain.impl")
+@ComponentScan(value = { "com.github.zengfr.project.stepchain",
+		"com.github.zengfr.project.stepchain.chain",
+		"com.github.zengfr.project.stepchain.step",
+		"com.github.zengfr.project.stepchain.pipeline",
+		"com.github.zengfr.project.stepchain.spring", 
+		"com.github.zengfr.project.stepchain.config", })
 public class StepChainAutoConfiguration {
 }

@@ -1,4 +1,4 @@
-package com.github.zengfr.project.stepchain.impl;
+package com.github.zengfr.project.stepchain.chain;
 
 import java.util.function.Function;
 
@@ -11,7 +11,7 @@ import com.github.zengfr.project.stepchain.util.ProcessorUtil;
  *         https://github.com/zengfr/stepchain-spring-boot-starter
  */
 class ChainImpl<A, B> implements Chain<A, B> {
-	Processor<A, B> processor;
+	protected Processor<A, B> processor;
 
 	public ChainImpl(Processor<A, B> processor) {
 		this.processor = processor;
@@ -30,6 +30,11 @@ class ChainImpl<A, B> implements Chain<A, B> {
 	}
 
 	@Override
+	public <C> Chain<A, C> next(Chain<B, C> chain) {
+		return next((Processor<B, C>) chain);
+	}
+
+	@Override
 	public Boolean isEnabled() {
 		return true;
 	}
@@ -38,4 +43,5 @@ class ChainImpl<A, B> implements Chain<A, B> {
 	public B process(A context) throws Exception {
 		return processor.process(context);
 	}
+
 }
