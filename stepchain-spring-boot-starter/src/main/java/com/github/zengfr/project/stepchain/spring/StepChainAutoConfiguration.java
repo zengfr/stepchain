@@ -9,8 +9,10 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(value = { "com.github.zengfr.project.stepchain",
+		"com.github.zengfr.project.stepchain.context",
 		"com.github.zengfr.project.stepchain.chain",
 		"com.github.zengfr.project.stepchain.step",
+		"com.github.zengfr.project.stepchain.processor",
 		"com.github.zengfr.project.stepchain.pipeline",
 		"com.github.zengfr.project.stepchain.spring", 
 		"com.github.zengfr.project.stepchain.config", })

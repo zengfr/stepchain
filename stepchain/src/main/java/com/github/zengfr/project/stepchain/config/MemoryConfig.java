@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.github.zengfr.project.stepchain.Config;
+import com.github.zengfr.project.stepchain.IConfig;
 import com.google.common.collect.Maps;
 
 /**
@@ -12,7 +12,7 @@ import com.google.common.collect.Maps;
  *         https://github.com/zengfr/stepchain-spring-boot-starter
  */
 @Component
-public class MemoryConfig implements Config {
+public class MemoryConfig implements IConfig {
 	Map<String, Object> cfgs = Maps.newHashMap();
 
 	@Override

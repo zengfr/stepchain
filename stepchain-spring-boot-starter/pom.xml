@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>stepchain-spring-boot-starter</artifactId>
-	<version>0.0.5</version>
+	<version>0.0.7</version>
 	<name>stepchain-spring-boot-starter</name>
 	<url>https://github.com/zengfr</url>
 	<description>https://github.com/zengfr stepchain-spring-boot-starter</description>
@@ -25,7 +25,7 @@
 			<dependency>
 				<artifactId>stepchain</artifactId>
 				<groupId>com.github.zengfr.project</groupId>
-				<version>0.0.2</version>
+				<version>0.0.7</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

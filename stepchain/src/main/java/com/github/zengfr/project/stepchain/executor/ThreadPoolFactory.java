@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  *         https://github.com/zengfr/stepchain-spring-boot-starter
  */
 public class ThreadPoolFactory {
-	private static ThreadPoolExecutor global = (ThreadPoolExecutor) Executors.newFixedThreadPool(4);
+	private static ThreadPoolExecutor global = (ThreadPoolExecutor) Executors.newFixedThreadPool(8);
 
 	public static ThreadPoolExecutor smartCreateOrGet(int parallelCount) {
 		if (parallelCount % 2 != 0) {

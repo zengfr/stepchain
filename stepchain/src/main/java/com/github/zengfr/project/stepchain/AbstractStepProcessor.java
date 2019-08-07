@@ -8,7 +8,7 @@ package com.github.zengfr.project.stepchain;
  *         https://github.com/zengfr/stepchain-spring-boot-starter
  */
 public abstract class AbstractStepProcessor<A> extends AbstractProcessor<A, Boolean>
-		implements StepProcessor<A>, HandleExecute<A>, HandleException<A> {
+		implements IStepProcessor<A>, IExecuteHandler<A>, IExceptionHandler<A> {
 	@Override
 	public Boolean preExecute(A context) throws Exception {
 		return true;
@@ -26,8 +26,8 @@ public abstract class AbstractStepProcessor<A> extends AbstractProcessor<A, Bool
 
 	@Override
 	public Boolean process(A context) throws Exception {
+                Boolean rtn = true;
 		if (isEnabled()) {
-			Boolean rtn = true;
 			Exception ex = null;
 			try {
 				if (preExecute(context)) {
@@ -40,7 +40,7 @@ public abstract class AbstractStepProcessor<A> extends AbstractProcessor<A, Bool
 				rtn = handleException(context, ex) && rtn;
 			}
 		}
-		return true;
+		return rtn;
 	}
 
 }
