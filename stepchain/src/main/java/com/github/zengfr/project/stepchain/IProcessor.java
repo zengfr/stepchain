@@ -8,4 +8,6 @@ public interface IProcessor<I, O> {
 	Boolean isEnabled();
 
 	O process(I context) throws Exception;
+	 
 }
+  

@@ -15,10 +15,9 @@
 		<jdk.version>1.8</jdk.version>
 	</properties>
 	<parent>
-		<groupId>com.github.zengfr.project</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.0.2</version>
-		<relativePath>../Zengfr-Project-Super-POM-And-BOM/project/parent/pom.xml</relativePath>
+		<groupId>com.github.zengfr.conuniframework</groupId>
+		<artifactId>conuniframework-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<dependencyManagement>
 		<dependencies>
